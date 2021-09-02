@@ -1,0 +1,59 @@
+<form autocomplete="off" [formGroup]="signUpInfo" (ngSubmit)="onSubmit()">
+    <button class="btnBack" routerLink="/home">Back</button>
+    <h1>Sign Up</h1>
+    <div class="firstname">
+        <label #label id="firstname" for="firstname">First name
+            <span class="error">is required</span>
+        </label>
+        <input #input type="text" name="firstname" (focus)="goUp($event)" (focusout)="goDown($event)" formControlName="firstname">
+        <p *ngIf="control('firstname')?.errors?.maxlength" class="errorCondition">No more than 30 characters.</p>
+    </div>
+    <div class="lastname">
+        <label #label id="lastname" for="lastname">Last name
+            <span class="error">is required</span>
+        </label>
+        <input #input type="text" name="lastname" (focus)="goUp($event)" (focusout)="goDown($event)" formControlName="lastname">
+        <p *ngIf="control('lastname')?.errors?.maxlength" class="errorCondition">No more than 30 characters.</p>
+    </div>
+    <div class="email">
+        <label #label id="email" for="lastname">Email
+            <span class="error">is required</span>
+        </label>
+        <input #input type="email" name="email" (focus)="goUp($event)" (focusout)="goDown($event)" formControlName="email">
+        <p *ngIf="control('email')?.errors?.email" class="errorCondition">Should be correct e-mail.</p>
+    </div>
+    <div class="password">
+        <label #label id="password" for="password">Password
+            <span class="error">is required</span>
+        </label>
+        <div #secureIndicator class="secureIndicator"></div>
+        <input #input type="password" name="password" (focus)="goUp($event)" (focusout)="goDown($event)" (input)="isSecurePassword($event)" formControlName="password">
+        <p *ngIf="control('password')?.errors?.minlength" class="errorCondition">Password is too short.</p>
+        <div class="info"><i>i</i></div>
+        <div class="infoWindow">
+            <p>Use a combination of uppercase and lowercase letters, symbols and numbers.</p>
+            <div style="background-color: #bd0000; width: 40px; height: 3px; display: inline-block; margin-right: 10px;"></div><p style="display: inline-block;">Low security</p>
+            <br>
+            <div style="background-color: #c9a500; width: 40px; height: 3px; display: inline-block; margin-right: 10px;"></div><p style="display: inline-block;">Medium security</p>
+            <br>
+            <div style="background-color: #52bd00; width: 40px; height: 3px; display: inline-block; margin-right: 10px;"></div><p style="display: inline-block;">High security</p>
+        </div>
+    </div>
+    <div class="password">
+        <label #label id="password_confirmation" for="password_confirmation">Password confirmation
+            <span class="error">is required</span>
+        </label>
+        <input #input type="password" name="password_confirmation" (focus)="goUp($event)" (focusout)="goDown($event)" formControlName="passwordConfirmation">
+        <p *ngIf="control('passwordConfirmation')?.errors?.mustMatch" class="errorCondition">
+            Password must match.
+        </p>
+    </div>
+    <div class="submitContainer">
+        <button #submit type="submit" class="btnSubmit" [disabled]="signUpInfo.invalid">Submit</button>
+        <div *ngIf="signUpInfo.invalid" class="btnWrap" (click)="openPrompt()"></div>
+        <div #prompt class="prompt">
+            Please fill in all the input fields.
+        </div>
+    </div>
+    <p class="loginLink">Already have an account? Please <a href="login">Log In</a>.</p>
+</form>

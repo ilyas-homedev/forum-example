@@ -1,0 +1,18 @@
+<form autocomplete="off" [formGroup]="loginInfo" (ngSubmit)="onSubmit()">
+    <button class="btnBack" routerLink="/home">Back</button>
+    <!-- <h1>Log In</h1> -->
+    <div class="email">
+        <label #label id="email" for="email">Email
+            <span class="error">is required</span>
+        </label>
+        <input type="email" name="email" (focus)="goUp($event)" (focusout)="goDown($event)" formControlName="email">
+    </div>
+    <div class="password">
+        <label #label id="password" for="password">Password
+            <span class="error">is required</span>
+        </label>
+        <input type="password" name="password" (focus)="goUp($event)" (focusout)="goDown($event)" formControlName="password">
+    </div>
+    <button #submit type="submit" class="btnSubmit" [disabled]="loginInfo.invalid">Log in</button>
+    <p class="signupLink">Create an account - <a href="signup">Sign Up</a></p>
+</form>

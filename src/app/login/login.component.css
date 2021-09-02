@@ -1,0 +1,196 @@
+form {
+    background-color: #fff;
+    width: 425px;
+    margin: 4rem auto;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: var(--primary-color);
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+}
+
+.email, .password {
+    position: relative;
+}
+
+label {
+    position: absolute;
+    pointer-events: none;
+    color: rgba(38, 38, 38, .5);
+    left: 48px;
+    top: 18px;
+    transition: all .3s ease-out;
+}
+
+input {
+    display: block;
+    width: 325px;
+    height: 40px;
+    font-size: 20px;
+    padding-left: 7px;
+    margin: 30px auto 20px auto;
+    background-color: #e3e3e3;
+    box-sizing: border-box;
+    border: none;
+    transition: all .3s ease-out;
+}
+
+
+input:focus {
+    outline: none;
+    border-bottom: 1px solid var(--primary-color);
+    background-color: transparent;
+}
+
+.filledInput {
+    border-bottom: 1px solid var(--primary-color);
+    background-color: transparent;
+}
+
+.openInput {
+    top: -20px;
+}
+
+.btnSubmit {
+    display: block;
+    cursor: pointer;
+    height: 32px;
+    margin: 0 auto 10px auto;
+    padding: 5px 10px 8px 10px;
+    font-size: 20px;
+    color: var(--primary-color);
+    border: none;
+    background-color: #e3e3e3;
+    color: var(--active-btn-color);
+}
+
+.btnSubmit:not(:disabled):hover {
+    background-color: transparent;
+}
+
+.btnSubmit:disabled {
+    color: rgba(38, 38, 38, .5);
+}
+
+.btnBack {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    padding: 8px 10px;
+    cursor: pointer;
+    color: var(--primary-color);
+    opacity: .5;
+}
+
+.btnBack:hover {
+    opacity: 1;
+}
+
+.secureIndicator {
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    background-color: #e3e3e3;
+    top: -12px;
+    left: 130px;
+    display: none;
+}
+
+.info {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: 1px solid var(--active-btn-color);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 13px;
+    color: var(--active-btn-color);
+    top: 12px;
+    right: 10px;
+}
+
+.info i {
+    pointer-events: none;
+    position: absolute;
+    right: 6px;
+}
+
+.info:hover~.infoWindow {
+    display: block;
+}
+
+.infoWindow {
+    position: absolute;
+    top: -36px;
+    right: -195px;
+    width: 200px;
+    height: 110px;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 12px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: 1px solid var(--active-btn-color);
+    display: none;
+}
+
+.infoWindow p {
+    margin: 0;
+}
+
+.error {
+    color: #bd0000;
+    display: none;
+}
+
+.errorCondition {
+    position: absolute;
+    margin: 0;
+    top: 40px;
+    left: 48px;
+    font-size: 12px;
+}
+
+.submitContainer {
+    position: relative;
+}
+
+.prompt {
+    position: absolute;
+    bottom: 0;
+    left: 86px;
+    padding: 5px;
+    border: 1px solid #bd0000;
+    background-color: var(--primary-color);
+    color: #fff;
+    display: none;
+}
+
+.btnWrap {
+    position: absolute;
+    bottom: 0;
+    left: 162px;
+    width: 80px;
+    height: 31px;
+}
+
+.signupLink {
+    margin: 0;
+    text-align: center;
+}
+
+.signupLink a {
+    text-decoration: none;
+    color: var(--active-btn-color);
+}
+
+.signupLink a:hover {
+    text-decoration: underline;
+}
