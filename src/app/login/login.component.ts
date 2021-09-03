@@ -17,6 +17,7 @@ export class LoginComponent {
   }
 
   @ViewChildren('label') labels: QueryList<ElementRef>
+  @ViewChildren('input') inputs: QueryList<ElementRef>
 
   goUp(event: any) {
     this.labels.forEach(label => {
@@ -50,5 +51,22 @@ export class LoginComponent {
     console.log(this.loginInfo.value);
   }
 
+  inputIsEmpty(input: any) {
+    if (input.nativeElement.value.length === 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  openPrompt() {
+    this.labels.forEach(label => {
+      this.inputs.forEach(input => {
+        if (this.inputIsEmpty(input) && input.nativeElement.name === label.nativeElement.id) {
+          label.nativeElement.childNodes[1].style.display = "inline";
+        }
+      })
+    })
+  }
   
 }

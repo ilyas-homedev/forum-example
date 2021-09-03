@@ -5,6 +5,7 @@
 
 
 body {
+    position: relative;
     margin: 0;
     padding: 0;
     background: #262626;
@@ -15,5 +16,5 @@ body {
     --primary-color: #262626;
     --active-btn-color: #00bd91;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
