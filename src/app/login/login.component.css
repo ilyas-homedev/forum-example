@@ -39,7 +39,6 @@ input {
     transition: all .3s ease-out;
 }
 
-
 input:focus {
     outline: none;
     border-bottom: 1px solid var(--primary-color);
@@ -59,7 +58,7 @@ input:focus {
     display: block;
     cursor: pointer;
     height: 32px;
-    margin: 0 auto 10px auto;
+    margin: 0 auto;
     padding: 5px 10px 8px 10px;
     font-size: 20px;
     color: var(--primary-color);
@@ -93,58 +92,6 @@ input:focus {
     opacity: 1;
 }
 
-.secureIndicator {
-    position: absolute;
-    width: 40px;
-    height: 3px;
-    background-color: #e3e3e3;
-    top: -12px;
-    left: 130px;
-    display: none;
-}
-
-.info {
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    border: 1px solid var(--active-btn-color);
-    border-radius: 50%;
-    text-align: center;
-    font-size: 13px;
-    color: var(--active-btn-color);
-    top: 12px;
-    right: 10px;
-}
-
-.info i {
-    pointer-events: none;
-    position: absolute;
-    right: 6px;
-}
-
-.info:hover~.infoWindow {
-    display: block;
-}
-
-.infoWindow {
-    position: absolute;
-    top: -36px;
-    right: -195px;
-    width: 200px;
-    height: 110px;
-    box-sizing: border-box;
-    padding: 10px;
-    font-size: 12px;
-    background-color: var(--primary-color);
-    color: #fff;
-    border: 1px solid var(--active-btn-color);
-    display: none;
-}
-
-.infoWindow p {
-    margin: 0;
-}
-
 .error {
     color: #bd0000;
     display: none;
@@ -158,25 +105,18 @@ input:focus {
     font-size: 12px;
 }
 
-.submitContainer {
+.login-container {
     position: relative;
-}
-
-.prompt {
-    position: absolute;
-    bottom: 0;
-    left: 86px;
-    padding: 5px;
-    border: 1px solid #bd0000;
-    background-color: var(--primary-color);
-    color: #fff;
-    display: none;
+    margin-bottom: 10px;
 }
 
 .btnWrap {
     position: absolute;
     bottom: 0;
-    left: 162px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
     width: 80px;
     height: 31px;
 }
