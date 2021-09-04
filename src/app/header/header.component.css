@@ -5,15 +5,16 @@
     background-color: #F6F6F6;
     box-sizing: border-box;
     display: flex;
+    justify-content: space-between;
 }
 
-.navbar {
+/* .navbar {
     width: 100%;
-}
+} */
 
 .auth_links {
     box-sizing: border-box;
-    width: 20rem;
+    width: 215px;
     border-left: 5px solid #262626;
     text-align: center;
     display: flex;
@@ -22,13 +23,41 @@
     padding-right: 40px;
 }
 
-a {
+.auth_links a {
     text-decoration: none;
     position: relative;
     font-size: 20px;
     color: var(--primary-color);
 }
 
-a:hover {
+.auth_links a:hover {
+    color: var(--active-btn-color);
+}
+
+.logo-container {
+    width: 300px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: var(--active-btn-color);
+    margin: 0 20px;
+    color: var(--primary-color);
+}
+
+.logo-img {
+    width: 60px;
+}
+
+.logo-name {
+    margin: 0;
+    font-size: 24px;
+    padding: 15px 0;
+}
+
+.logo-name span {
     color: var(--active-btn-color);
 }
